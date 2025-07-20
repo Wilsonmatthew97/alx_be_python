@@ -13,11 +13,11 @@ match operations:
         result = num1 * num2
         print(f"The result is {result}.")
     case "/":
-        if num2 == 0:
-            print("Cannot divide by zero.")
-        else:
+        if num2 != 0:
             result = num1 / num2
             print(f"The result is {result}.")
+        else:
+            print("Error: division by zero is not allowed.")
     case _:
         print("unknown operation")
         
