@@ -1,8 +1,8 @@
 num1 = int(input("Enter the first number:"))
 num2 = int(input("Enter the second number:"))
-operator = input("Choose the operation (+, -, *, /):")
+operations = input("Choose the operation (+, -, *, /):")
 
-match operator:
+match operations:
     case "+":
         result = num1 + num2
         print(f"The result is {result}.")
@@ -18,4 +18,6 @@ match operator:
         else:
             result = num1 / num2
             print(f"The result is {result}.")
+    case _:
+        print("unknown operation")
         
