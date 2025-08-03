@@ -1,6 +1,6 @@
-def safe_divide(numerator, denominator):
+def safe_divide(float(numerator), float(denominator)):
     try:
-        result = float(numerator / denominator)
+        result = numerator / denominator
     
     except (ValueError, TypeError):
         print("Error: Please enter numeric values only.")
