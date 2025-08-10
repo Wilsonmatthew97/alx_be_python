@@ -32,13 +32,7 @@ class Library:
     def add_book(self, book):
         if isinstance(book, Book):
             self.books.append(book)
-
-            if isinstance(book, EBook):
-                print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}")
-            elif isinstance(book, PrintBook):
-                print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
-            else:
-                print(f"Book: {book.title} by {book.author}")
+            print(book)
         else:
             print("Only Book, EBook, PrintBook can be added")
     
@@ -47,10 +41,5 @@ class Library:
             print("Library is empty")
         else:
             for book in self.books:
-                 if isinstance(book, EBook):
-                    print(f"EBook: {book.title} by {book.author}, File Size: {book.file_size}")
-                 elif isinstance(book, PrintBook):
-                    print(f"PrintBook: {book.title} by {book.author}, Page Count: {book.page_count}")
-                 else:
-                    print(f"Book: {book.title} by {book.author}")
+                print(book)
                 
